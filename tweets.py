@@ -32,7 +32,7 @@ search_word = ''
 #Input inital date to extract tweets
 date_since = ''
 
-#Maximum number of Tweets is 1000. You can define any number inside items.
+#Maximum number of Tweets to extract is 1000. You can define any number inside items.
 tweets = tweepy.Cursor(api.search, q = search_word, language = 'en', since = date_since).items(1000)
 tweet_list = [tweet for tweet in tweets]
 no_of_tweets = 0
